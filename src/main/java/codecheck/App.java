@@ -11,7 +11,7 @@ import java.lang.StringBuilder;
 public class App {
 	public static void main(String[] args) {
 
-		String val = request.getParameter(args);
+		String val = new String(args);
 		String urlString = "http://challenge-server.code-check.io/api/hash?q=";
 
 		String url = urlString + val;
