@@ -22,7 +22,7 @@ public class App {
 
 		try {
 			URL url1 = new URL(url);
-			urlConn = (HttpURLConnection) url.openConnection();
+			urlConn = (HttpURLConnection) url1.openConnection();
 			urlConn.setRequestMethod("GET");
 			urlConn.connect();
 			int status = urlConn.getResponseCode();
