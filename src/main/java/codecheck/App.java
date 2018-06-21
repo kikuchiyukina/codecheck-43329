@@ -21,7 +21,7 @@ public class App {
 		BufferedReader reader = null;
 
 		try {
-			URL url = new URL(url);
+			URL url1 = new URL(url);
 			urlConn = (HttpURLConnection) url.openConnection();
 			urlConn.setRequestMethod("GET");
 			urlConn.connect();
