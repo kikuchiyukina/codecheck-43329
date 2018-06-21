@@ -11,10 +11,14 @@ import java.lang.StringBuilder;
 public class App {
 	public static void main(String[] args) {
 
-		String val = new String(args);
-		String urlString = "http://challenge-server.code-check.io/api/hash?q=";
+		String [] ib = new String[args.length];
 
-		String url = urlString + val;
+		String urlString = "http://challenge-server.code-check.io/api/hash?q=";
+		for (int i = 0; i < args.length; i++) {
+			ib[i] = args[i];
+			String url = urlString + ib[i];
+
+
 
 		HttpURLConnection  urlConn = null;
 		InputStream in = null;
@@ -52,5 +56,6 @@ public class App {
 				e.printStackTrace();
 			}
 		}
-			}
 		}
+	}
+}
